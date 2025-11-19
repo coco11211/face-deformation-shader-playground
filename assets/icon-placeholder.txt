@@ -1,0 +1,18 @@
+Icon Placeholder
+
+For production builds, replace this file with actual icon files:
+
+Required icon files:
+1. icon.ico - Windows icon (256x256, 128x128, 64x64, 48x48, 32x32, 16x16)
+2. icon.png - General purpose icon (512x512 or 1024x1024)
+
+You can create icons using:
+- Online tools: https://convertio.co/png-ico/
+- Photoshop, GIMP, or other image editors
+- Icon generators: https://icon.kitchen/
+
+Recommended icon design:
+- Simple, recognizable symbol representing face/shader effects
+- High contrast for visibility at small sizes
+- Professional gradient or flat design
+- Colors matching the app theme (blues and teals)

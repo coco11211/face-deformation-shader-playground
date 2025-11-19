@@ -1,0 +1,70 @@
+{
+  "name": "face-deformation-studio",
+  "version": "1.0.0",
+  "description": "Production-ready face deformation shader playground for Windows 11",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder --win",
+    "build:dir": "electron-builder --win --dir",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "face-deformation",
+    "shader",
+    "webgl",
+    "electron",
+    "windows11"
+  ],
+  "author": "Face Deformation Studio",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "three": "^0.158.0",
+    "@tensorflow/tfjs": "^4.13.0",
+    "@tensorflow-models/face-landmarks-detection": "^1.0.2"
+  },
+  "build": {
+    "appId": "com.facedeformation.studio",
+    "productName": "Face Deformation Studio",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "publisherName": "Face Deformation Studio"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Face Deformation Studio"
+    },
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ]
+  }
+}
